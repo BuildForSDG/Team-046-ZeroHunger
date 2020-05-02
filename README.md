@@ -1,6 +1,8 @@
 ![Zero Hunger Image](https://i.ytimg.com/vi/86Rcur6vg9U/maxresdefault.jpg)
 ## About
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2ea27aae53b742bcbe3659ddd0622dbf)](https://app.codacy.com/gh/BuildForSDG/Team-046-ZeroHunger?utm_source=github.com&utm_medium=referral&utm_content=BuildForSDG/Team-046-ZeroHunger&utm_campaign=Badge_Grade_Dashboard)
+
 The Zero Hunger Project aims to end hunger and malnutrition by 2030, and to ensure access to safe, nutritious and sufficient food. Our planet has provided us with tremendous resources, but unequal access and inefficient handling leaves millions of people malnourished. If we promote sustainable agriculture with modern technologies and fair distribution systems, we can help sustain the whole world’s population and help make sure that nobody will ever suffer from hunger again.
 
 ## Why
