@@ -7,7 +7,6 @@ const agentInputValidation = (data) => {
   data.CompanyName = !isEmpty(data.CompanyName) ? data.CompanyName : '';
   data.CompanyDescription = !isEmpty(data.CompanyDescription) ? data.CompanyDescription : '';
   data.CompanyAddress = !isEmpty(data.CompanyAddress) ? data.CompanyAddress : '';
-  
 
 
   if (!Validator.isEmpty(data.CompanyName, { min: 2, max: 200 })) {
