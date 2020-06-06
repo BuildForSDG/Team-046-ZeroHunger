@@ -29,7 +29,7 @@ app.use(bodyParser.json());
 
 app.use('/test', (req, res) => res.status(200).send({ message: 'YAY! Congratulations! Your first endpoint is working' }));
 app.use('/api/users', users);
-app.use('/api/users/agent', agents);
+app.use('/api/profile', agents);
 
 
 module.exports = app;

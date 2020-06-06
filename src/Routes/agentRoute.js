@@ -1,18 +1,18 @@
 // import express from 'express';
 const express = require('express');
-const User = require('../Models/User');
+// const User = require('../Models/User');
 const Agent = require('../Models/agent');
-const agentValidation = require('../Middlewares/agentValidation');
+const agentInputValidation = require('../Middlewares/agentValidation');
 
 
 const router = express.Router();
 
 /**
- * @description POST api/agent route
+ * @description POST api/profile/agent route
  * @access  public
  */
 router.post('/agent', (req, res) => {
-  const { errors, isValid } = agentValidation(req.body);
+  const { errors, isValid } = agentInputValidation(req.body);
   if (!isValid) {
     return res.status(400).json(errors);
   }
@@ -32,14 +32,14 @@ router.post('/agent', (req, res) => {
 
 
 /**
- * @description GET api/agent/:users_id route
+ * @description GET api/profile/agent/:_id route
  * get agent by user id
  * @access  public
  */
 
-router.get('/users/users_id', (req, res) => {
+router.get('/agent/:_id', (req, res) => {
   const errors = {};
-  Agent.findOne({ user: req.params.users_id, _id: req.params.id })
+  Agent.findOne({ _id: req.params.id })
     .then((agent) => {
       if (!agent) {
         errors.findagent = 'no agent found';
@@ -51,7 +51,7 @@ router.get('/users/users_id', (req, res) => {
 });
 
 /**
- * @description GET api/agent/all  get all profile route
+ * @description GET api/profile/agent/all  get all profile route
  * @access  public
  *
  * @return json object
@@ -69,7 +69,7 @@ router.get('/agent/all', (req, res) => {
     .catch((err) => res.status(500).json(err));
 });
 
-router.delete('/agent/:user_id', (req, res) => {
+router.delete('/agent/:_id', (req, res) => {
   const errors = {};
   Agent.findOneAndDelete()
     .then((agent) => {
